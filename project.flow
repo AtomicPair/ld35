@@ -1,0 +1,43 @@
+{
+  luxe:
+  {
+    window:
+    {
+      width: 640,
+      height: 480,
+      title: 'Strata',
+      fullscreen: false,
+      resizable: true,
+      borderless: false
+    }
+  },
+
+  project:
+  {
+    name: 'Strata',
+    version: '1.0.0',
+    author: 'Adam Parrott',
+
+    app:
+    {
+      name: 'game',
+      package: 'com.ld35'
+    },
+
+    build:
+    {
+      defines: [ "no_debug_console", "no-debug" ],
+      flags: [ "-dce full" ],
+      dependencies:
+      {
+        luxe : '*',
+        "thx.core": "*"
+      }
+    },
+
+    files:
+    {
+      assets: 'assets/'
+    }
+  }
+}
